@@ -1,0 +1,82 @@
+
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    /* YOUR BACKGROUND IMAGE*/
+    background: url("./bg.jpg") no-repeat center center/cover;
+    color: #00ff00ff;
+}
+
+/* DARK OVERLAY */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+/* NAVBAR */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 40px;
+    text-shadow: 0 0 10px #00ff00ff;
+}
+
+/* SEARCH */
+.search-box {
+    text-align: center;
+    margin: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #00ff00ff;
+    background: black;
+    color: #00ff00ff;
+}
+
+/* PRODUCTS GRID */
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 30px;
+}
+
+/* CARD */
+.card {
+    background: #111;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #00ff00ff;
+    transition: 0.3s;
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+/* HOVER */
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00ff00ff;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
